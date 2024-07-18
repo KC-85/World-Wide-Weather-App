@@ -4,7 +4,7 @@ $(document).ready(function () {
  
 async function weatherFn(cName) {
     const temp =
-        `${url}?q=${cName}&appid=${apiKey}&units=metric`;
+        `${'https://api.openweathermap.org/data/2.5/weather'}?q=${cName}&appid=${'f00c38e0279b7bc85480c3fe775d518c'}&units=metric`;
     try {
         const res = await fetch(temp);
         const data = await res.json();
