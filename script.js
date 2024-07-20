@@ -1,6 +1,8 @@
 
-
+search addEventListener('click', () => {
 const APIkey = '5ba3a0833b8cf2821b6f85c07081ec3a';
+const input = document.querySelector('.search-box input').value 
+}
 
 $(document).ready(function () {
     weatherFn('Lincolnshire');
