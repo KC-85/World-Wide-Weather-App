@@ -1,7 +1,8 @@
 /* jshint esversion: 11, jquery: true */
 
 let search = $("#city-input-btn");
-let url = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=5ba3a0833b8cf2821b6f85c07081ec3a"; // paste the API URL here in the quotes
+let url = "api.openweathermap.org/data/2.5/weather"; // paste the API URL here in the quotes
+const APIkey = ('5ba3a0833b8cf2821b6f85c07081ec3a');
 
 function showError(message) {
     const errorBox = document.querySelector('.error-box');
@@ -9,7 +10,6 @@ function showError(message) {
 }
 
 search.on('click', () => {
-    const APIkey = ('5ba3a0833b8cf2821b6f85c07081ec3a');
     const input = $("#city-input").val();
 
     if (input === '') 
