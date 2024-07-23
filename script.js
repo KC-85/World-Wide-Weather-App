@@ -1,10 +1,16 @@
+/* jshint esversion: 11, jquery: true */
+
+let search = $("#city-input-btn");
+let url = ""; // paste the API URL here in the quotes
+
 function showError(message) {
     const errorBox = document.querySelector('.error-box');
-    const errorMessage = document.querySelector('.error-message')};
+    const errorMessage = document.querySelector('.error-message');
+}
 
-search.addEventListener ('click', () => {
+search.addEventListener('click', () => {
     const APIkey = ('5ba3a0833b8cf2821b6f85c07081ec3a');
-    const input = document.querySelector('.search-box input').value;
+    const input = $("#city-input").val();
 
     if (input === '') 
         return;
@@ -13,7 +19,7 @@ search.addEventListener ('click', () => {
 $(document).ready(function () {
     weatherFn('Lincolnshire');
 });
- 
+
 async function weatherFn(cName) {
     const temp =
         `${url}?q=${cName}&appid=${apiKey}&units=metric`;
@@ -23,9 +29,10 @@ async function weatherFn(cName) {
         if (res.ok) {
             weatherShowFn(data);
         } else {
-            alert('City not found. Please try again.');
+            alert('City not found. Please try again.');  // consider replacing this with a dialogue: https://www.youtube.com/watch?v=ywtkJkxJsdg
         }
     } catch (error) {
+        showError(error);
         console.error('Error fetching weather data:', error);
     }
 }
