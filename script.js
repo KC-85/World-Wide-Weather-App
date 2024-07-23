@@ -1,8 +1,8 @@
 /* jshint esversion: 11, jquery: true */
 
 let search = $("#city-input-btn");
-let url = "api.openweathermap.org/data/2.5/weather"; // paste the API URL here in the quotes
-const APIkey = ('5ba3a0833b8cf2821b6f85c07081ec3a');
+let url = "api.openweathermap.org/data/2.5/weather";
+const APIKey = '5ba3a0833b8cf2821b6f85c07081ec3a';
 
 function showError(message) {
     const errorBox = document.querySelector('.error-box');
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 async function weatherFn(cName) {
     const temp =
-        `${url}?q=${cName}&appid=${APIKey}&units=metric`;
+        `${url}?q=${cName}&appid=${APIkey}&units=metric`;
     try {
         const res = await fetch(temp);
         const data = await res.json();
