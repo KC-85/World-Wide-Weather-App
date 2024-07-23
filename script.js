@@ -1,7 +1,7 @@
 /* jshint esversion: 11, jquery: true */
 
 let search = $("#city-input-btn");
-let url = "api.openweathermap.org/data/2.5/weather";
+let url = "https://api.openweathermap.org/data/2.5/weather";
 const APIkey = '5ba3a0833b8cf2821b6f85c07081ec3a';
 
 function showError(message) {
