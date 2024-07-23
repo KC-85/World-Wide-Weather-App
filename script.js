@@ -8,7 +8,7 @@ function showError(message) {
     const errorMessage = document.querySelector('.error-message');
 }
 
-search.addEventListener('click', () => {
+search.on('click', () => {
     const APIkey = ('5ba3a0833b8cf2821b6f85c07081ec3a');
     const input = $("#city-input").val();
 
