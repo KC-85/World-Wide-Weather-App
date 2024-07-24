@@ -22,7 +22,7 @@ search.on('click', () => {
 });
 
 $(document).ready(function () {
-    weatherFn('Lincolnshire');
+    weatherFn('Your Local Weather');
 });
 
 async function weatherFn(cName) {
