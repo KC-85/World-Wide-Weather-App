@@ -13,7 +13,7 @@ body {
 }
 
 .weather-card {
-    background: rgba(8, 232, 53, 0.9);
+    background: rgba(105, 243, 50, 0.999);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
