@@ -21,10 +21,6 @@ search.on('click', () => {
     weatherFn(input);
 });
 
-$(document).ready(function () {
-    weatherFn('Your Local Weather');
-});
-
 async function weatherFn(cName) {
     const temp = `${url}?q=${cName}&appid=${APIkey}&units=metric`;
     try {
