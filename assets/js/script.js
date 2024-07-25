@@ -21,6 +21,16 @@ search.on('click', () => {
     weatherFn(input);
 });
 
+$(document).ready(function () {
+    // Show introduction modal on page load
+    $('#introduction-modal').show();
+
+    // Close the introduction modal
+    $('.close-btn').on('click', function () {
+        $('#introduction-modal').hide();
+    });
+});
+
 async function weatherFn(cName) {
     const temp = `${url}?q=${cName}&appid=${APIkey}&units=metric`;
     try {
