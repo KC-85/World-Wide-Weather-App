@@ -9,30 +9,39 @@
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 </head>
 <body>
-    <div id="introduction-modal" class="modal">
+    <!-- Introduction Modal -->
+    <div id="introduction-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Welcome to the Weather App!</h2>
+            <button class="close-btn" aria-label="Close introduction">&times;</button>
+            <h2 id="modal-title">Welcome to the Weather App!</h2>
             <p>Enter a city name to get the current weather information including temperature, weather conditions, wind speed, and the current date and time.</p>
             <p>The icon image changes based on the weather conditions, and you can see a moon on the top left and a sun on the top right.</p>
             <p>Enjoy using the app!</p>
         </div>
     </div>
+
+    <!-- Decorative Elements -->
     <div id="moon">
         <img src="assets/images/icons8-moon-64.png" alt="Moon">
     </div>
     <div id="sun">
         <img src="assets/images/icons8-sun-48.png" alt="Sun">
     </div>
+
+    <!-- Main Container -->
     <div class="container">
         <div class="weather-card">
-            <input type="text" id="city-input" placeholder="Enter city name">
+            <input type="text" id="city-input" placeholder="Enter city name" aria-label="City Name">
             <button id="city-input-btn">Get Weather</button>
-            <div id="weather-info">
+            
+            <!-- Error Container -->
+            <div id="error-container" aria-live="assertive"></div>
+
+            <div id="weather-info" aria-live="polite">
                 <h1>Your Local Weather Forecast</h1>
                 <h2>No matter where you are</h2>
                 <h3 id="city-name"></h3>
-                <img id="weather-icon" alt="Weather Icon">
+                <img id="weather-icon" alt="Weather Icon" role="presentation">
                 <p id="temperature"></p>
                 <p id="description"></p>
                 <p id="wind-speed"></p>
@@ -40,6 +49,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
