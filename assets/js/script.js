@@ -28,7 +28,7 @@ $(document).ready(function () {
         const errorBox = $('<div class="error-box"></div>');
         const errorMessage = $('<p class="error-message"></p>').text(message);
         errorBox.append(errorMessage);
-        $('body').append(errorBox);
+        $('#error-container').html(errorBox);
         errorBox.fadeIn().delay(3000).fadeOut(() => errorBox.remove());
     }
 
@@ -69,9 +69,7 @@ $(document).ready(function () {
 
         const weatherCard = $('.weather-card');
         weatherCard.css({
-            'background-image': `url('images/${backgroundImage}')`,
-            'background-size': 'cover',
-            'background-position': 'center'
+            'background-image': `url('assets/images/${backgroundImage}')`,
         });
 
         $('#city-name').text(data.name);
