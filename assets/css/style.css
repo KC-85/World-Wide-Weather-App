@@ -135,21 +135,6 @@ body {
     text-align: center;
 }
 
-/* Decorative Elements */
-#moon img,
-#sun img {
-    position: absolute;
-    top: 10px;
-}
-
-#moon {
-    left: 10px;
-}
-
-#sun {
-    right: 10px;
-}
-
 /* Loading Spinner Styles */
 .loading-spinner {
     margin-top: 20px;
