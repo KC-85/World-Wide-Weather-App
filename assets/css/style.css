@@ -100,16 +100,20 @@ body {
 #weather-info {
     display: none; /* Initially hidden */
     margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px;
 }
 
+/* Making the text lighter to contrast with the background */
+#city-name, #temperature, #description, #wind-speed, #date {
+    color: #fff; /* White text color for better contrast */
+}
+
+/* Styling for the text elements */
 #temperature {
     font-size: 2em;
     margin: 10px 0;
-}
-
-#weather-icon {
-    width: 100px;
-    height: 100px;
 }
 
 #description {
@@ -120,7 +124,7 @@ body {
 #wind-speed, #date {
     margin: 5px 0;
     font-size: 0.9em;
-    color: #eee;
+    color: #eee; /* Slightly lighter than pure white for subtle contrast */
 }
 
 /* Error Container Styles */
