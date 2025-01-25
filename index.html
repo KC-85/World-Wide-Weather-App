@@ -9,40 +9,37 @@
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 </head>
 <body>
+
     <!-- Introduction Modal -->
     <div id="introduction-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-content">
             <button class="close-btn" aria-label="Close introduction">&times;</button>
             <h2 id="modal-title">Welcome to the Weather App!</h2>
-            <p>Enter a city name to get the current weather information including temperature, weather conditions, wind speed, and the current date and time.</p>
-            <p>The icon image changes based on the weather conditions.</p>
-            <p>Enjoy using the app!</p>
+            <p>Enter a city name to get real-time weather details.</p>
         </div>
     </div>
 
     <!-- Main Container -->
-    <div class="container">
-        <div class="weather-card">
-            <input type="text" id="city-input" placeholder="Enter city name" aria-label="City Name">
-            <button id="city-input-btn">Get Weather</button>
-            
-            <!-- Error Container -->
+    <main class="container">
+        <section class="weather-card">
+            <label for="city-input">Enter City Name:</label>
+            <div class="input-group">
+                <input type="text" id="city-input" placeholder="E.g., London, Tokyo" aria-label="City Name">
+                <button id="city-input-btn">Get Weather</button>
+            </div>
             <div id="error-container" aria-live="assertive"></div>
 
             <div id="weather-info" aria-live="polite">
-                <h1>Your Local Weather Forecast</h1>
-                <h2>No matter where you are</h2>
-                <h3 id="city-name"></h3>
-                <img id="weather-icon" alt="Weather Icon" role="presentation">
+                <h1 id="city-name"></h1>
+                <span id="weather-icon"></span>
                 <p id="temperature"></p>
                 <p id="description"></p>
                 <p id="wind-speed"></p>
                 <p id="date"></p>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
