@@ -5,12 +5,12 @@ import { showError, formatDate, showLoading, hideLoading } from "./utils.js";
 
 // API variables
 let APIkey = "";
-const url = "https://api.openweathermap.org/data/2.5/weather";
+const baseUrl = "https://api.openweathermap.org/data/3.0/onecall"; // OpenWeatherMap One Call API 3.0
 
 // Function to load API key from config.json
 async function loadAPIkey() {
     try {
-        const response = await fetch('../config.json'); // Adjust path if needed
+        const response = await fetch('../config.json'); // Ensure this file exists
         const data = await response.json();
         APIkey = data.API_KEY;
     } catch (error) {
@@ -42,33 +42,67 @@ $(document).ready(function () {
             showError("Please enter a city name.");
             return;
         }
-        fetchWeatherData(city);
+
+        // Call function to get latitude & longitude from city name
+        getCoordinates(city);
         $("#city-input").val(""); // Clear input after search
     }
 
-    // Fetch weather data from OpenWeatherMap API
-    async function fetchWeatherData(cityName) {
+    // Function to get latitude & longitude using OpenWeatherMap Geocoding API
+    async function getCoordinates(cityName) {
         if (!APIkey) {
-            showError("API key not available.")
+            showError("API key not available.");
             return;
         }
-        const requestURL = `${url}?q=${encodeURIComponent(cityName)}&appid=${APIkey}&units=metric`;
+
+        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&limit=1&appid=${APIkey}`;
 
         try {
-            showLoading(); // Show loading indicator
-            const res = await fetch(requestUrl);
+            showLoading();
+            const res = await fetch(geoUrl);
+            const data = await res.json();
+
+            if (data.length === 0) {
+                showError("City not found. Please try again.");
+                hideLoading();
+                return;
+            }
+
+            const lat = data[0].lat;
+            const lon = data[0].lon;
+
+            // Now fetch weather data using lat & lon
+            fetchWeatherData(lat, lon);
+        } catch (error) {
+            showError("Error fetching location data.");
+            console.error("Location fetch error:", error);
+        }
+    }
+
+    // Fetch weather data from OpenWeatherMap One Call API 3.0
+    async function fetchWeatherData(lat, lon) {
+        if (!APIkey) {
+            showError("API key not available.");
+            return;
+        }
+
+        const requestURL = `${baseUrl}?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
+
+        try {
+            showLoading();
+            const res = await fetch(requestURL);
             const data = await res.json();
 
             if (res.ok) {
                 displayWeather(data);
             } else {
-                showError(data.message || "City not found.");
+                showError(data.message || "Error retrieving weather data.");
             }
         } catch (error) {
             showError("Error fetching weather data.");
-            console.error("Fetch error:", error);
+            console.error("Weather fetch error:", error);
         } finally {
-            hideLoading(); // Hide loading indicator
+            hideLoading();
         }
     }
 
@@ -84,11 +118,11 @@ $(document).ready(function () {
             Mist: "🌫️"
         };
 
-        $("#weather-icon").text(weatherIcons[data.weather[0].main] || "🌍");
-        $("#city-name").text(data.name);
-        $("#temperature").html(`${data.main.temp}°C`);
-        $("#description").text(data.weather[0].description);
-        $("#wind-speed").html(`Wind Speed: ${data.wind.speed} km/h`);
+        $("#weather-icon").text(weatherIcons[data.current.weather[0].main] || "🌍");
+        $("#city-name").text("Weather for Selected Location");
+        $("#temperature").html(`${data.current.temp}°C`);
+        $("#description").text(data.current.weather[0].description);
+        $("#wind-speed").html(`Wind Speed: ${data.current.wind_speed} km/h`);
         $("#date").text(formatDate());
 
         $("#weather-info").fadeIn(); // Show the weather card
