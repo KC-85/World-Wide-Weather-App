@@ -30,6 +30,11 @@ $(document).ready(function () {
         handleWeatherSearch();
     });
 
+    // Close the introduction modal when the "X" button is clicked
+    $(".close-btn").on("click", function () {
+    $("#introduction-modal").fadeOut();
+    });
+
     // Allow "Enter" key to trigger search
     $("#city-input").keypress(function (e) {
         if (e.which === 13) handleWeatherSearch();
