@@ -1,118 +1,85 @@
 /* jshint esversion: 6, jquery: true */
 
-// Import helper functions from utils.js
+// This script will get local weather data from a JSON file 
+// Note: This will not be real-time data
+
 import { showError, formatDate, showLoading, hideLoading } from "./utils.js";
 
-// API variables
-let APIkey = "";
-const baseUrl = "https://api.openweathermap.org/data/3.0/onecall"; // OpenWeatherMap One Call API 3.0
+// Path to local JSON dataset (relative to index.html)
+const localDataUrl = "assets/data/weather.json";
 
-// Function to load API key from config.json
-async function loadAPIkey() {
-    try {
-        const response = await fetch('../config.json'); // Ensure this file exists
-        const data = await response.json();
-        APIkey = data.API_KEY;
-    } catch (error) {
-        console.error("Error loading API key:", error);
-        showError("Failed to load API key.");
-    }
-}
-
-// Load API key on script load
-loadAPIkey();
-
-// Wait for DOM to load
 $(document).ready(function () {
-    
-    // Event listener for button click
+
+    // Show introduction modal on load
+    $("#introduction-modal")
+        .addClass("active")
+        .attr("aria-hidden", "false");
+
+    // Close the introduction modal when the "X" button is clicked
+    $(".close-btn").on("click", function () {
+        $("#introduction-modal")
+            .fadeOut()
+            .attr("aria-hidden", "true")
+            .removeClass("active");
+    });
+
+    // Button click triggers search
     $("#city-input-btn").on("click", function () {
         handleWeatherSearch();
     });
 
-    // Close the introduction modal when the "X" button is clicked
-    $(".close-btn").on("click", function () {
-    $("#introduction-modal").fadeOut();
+    // Enter key in input triggers search
+    $("#city-input").on("keypress", function (e) {
+        if (e.which === 13) {
+            handleWeatherSearch();
+        }
     });
 
-    // Allow "Enter" key to trigger search
-    $("#city-input").keypress(function (e) {
-        if (e.which === 13) handleWeatherSearch();
-    });
-
-    // Function to handle user input and fetch weather
+    // Handle user input
     function handleWeatherSearch() {
         const city = $("#city-input").val().trim();
+
         if (!city) {
             showError("Please enter a city name.");
             return;
         }
 
-        // Call function to get latitude & longitude from city name
-        getCoordinates(city);
+        getLocalWeather(city);
         $("#city-input").val(""); // Clear input after search
     }
 
-    // Function to get latitude & longitude using OpenWeatherMap Geocoding API
-    async function getCoordinates(cityName) {
-        if (!APIkey) {
-            showError("API key not available.");
-            return;
-        }
-
-        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&limit=1&appid=${APIkey}`;
-
+    // Get weather from local JSON file
+    async function getLocalWeather(cityName) {
         try {
             showLoading();
-            const res = await fetch(geoUrl);
-            const data = await res.json();
 
-            if (data.length === 0) {
-                showError("City not found. Please try again.");
-                hideLoading();
+            const res = await fetch(localDataUrl);
+            if (!res.ok) {
+                throw new Error("Failed to load local weather data.");
+            }
+
+            const allData = await res.json();
+
+            const key = cityName.toLowerCase();
+            const cityData = allData[key];
+
+            if (!cityData) {
+                showError("City not available in this demo. Try London, Tokyo, New York or Sydney.");
                 return;
             }
 
-            const lat = data[0].lat;
-            const lon = data[0].lon;
+            displayWeather(cityData, cityName);
 
-            // Now fetch weather data using lat & lon
-            fetchWeatherData(lat, lon);
         } catch (error) {
-            showError("Error fetching location data.");
-            console.error("Location fetch error:", error);
-        }
-    }
-
-    // Fetch weather data from OpenWeatherMap One Call API 3.0
-    async function fetchWeatherData(lat, lon) {
-        if (!APIkey) {
-            showError("API key not available.");
-            return;
-        }
-
-        const requestURL = `${baseUrl}?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
-
-        try {
-            showLoading();
-            const res = await fetch(requestURL);
-            const data = await res.json();
-
-            if (res.ok) {
-                displayWeather(data);
-            } else {
-                showError(data.message || "Error retrieving weather data.");
-            }
-        } catch (error) {
-            showError("Error fetching weather data.");
-            console.error("Weather fetch error:", error);
+            console.error("Local data error:", error);
+            showError("Error loading local weather data.");
         } finally {
             hideLoading();
         }
     }
 
-    // Function to display weather details
-    function displayWeather(data) {
+    // Display weather details in the DOM
+    function displayWeather(data, cityName) {
         const weatherIcons = {
             Clear: "☀️",
             Clouds: "☁️",
@@ -123,13 +90,15 @@ $(document).ready(function () {
             Mist: "🌫️"
         };
 
-        $("#weather-icon").text(weatherIcons[data.current.weather[0].main] || "🌍");
-        $("#city-name").text("Weather for Selected Location");
+        const main = data.current.weather[0].main;
+
+        $("#weather-icon").text(weatherIcons[main] || "🌍");
+        $("#city-name").text(`Weather for ${cityName}`);
         $("#temperature").html(`${data.current.temp}°C`);
         $("#description").text(data.current.weather[0].description);
         $("#wind-speed").html(`Wind Speed: ${data.current.wind_speed} km/h`);
         $("#date").text(formatDate());
 
-        $("#weather-info").fadeIn(); // Show the weather card
+        $("#weather-info").fadeIn();
     }
 });
