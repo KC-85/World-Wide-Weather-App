@@ -1,8 +1,8 @@
 {
   "london": {
     "current": {
-      "temp": 10,
-      "wind_speed": 8,
+      "temp": 14,
+      "wind_speed": 5,
       "weather": [
         {
           "main": "Clouds",
@@ -43,6 +43,78 @@
         {
           "main": "Clear",
           "description": "sunny"
+        }
+      ]
+    }
+  },
+  "paris": {
+    "current": {
+      "temp": 16,
+      "wind_speed": 6,
+      "weather": [
+        {
+          "main": "Clouds",
+          "description": "broken clouds"
+        }
+      ]
+    }
+  },
+  "berlin": {
+    "current": {
+      "temp": 12,
+      "wind_speed": 9,
+      "weather": [
+        {
+          "main": "Rain",
+          "description": "moderate rain"
+        }
+      ]
+    }
+  },
+  "dubai": {
+    "current": {
+      "temp": 32,
+      "wind_speed": 10,
+      "weather": [
+        {
+          "main": "Clear",
+          "description": "hot and sunny"
+        }
+      ]
+    }
+  },
+  "cape town": {
+    "current": {
+      "temp": 20,
+      "wind_speed": 8,
+      "weather": [
+        {
+          "main": "Mist",
+          "description": "misty"
+        }
+      ]
+    }
+  },
+  "rio de janeiro": {
+    "current": {
+      "temp": 27,
+      "wind_speed": 5,
+      "weather": [
+        {
+          "main": "Drizzle",
+          "description": "light drizzle"
+        }
+      ]
+    }
+  },
+  "toronto": {
+    "current": {
+      "temp": 8,
+      "wind_speed": 11,
+      "weather": [
+        {
+          "main": "Snow",
+          "description": "light snow"
         }
       ]
     }
