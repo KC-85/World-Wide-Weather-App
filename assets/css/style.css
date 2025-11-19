@@ -26,6 +26,10 @@ body {
     align-items: center;
 }
 
+.modal-active {
+    display: flex;
+}
+
 .modal-content {
     background-color: #ffffff;
     padding: 20px;
@@ -88,7 +92,7 @@ body {
     cursor: pointer;
 }
 
-#city-input-btn-hover {
+#city-input-btn:hover {
     background-color: #2980b9;
 }
 
