@@ -10,28 +10,76 @@
 </head>
 <body>
 
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Introduction Modal -->
-    <div id="introduction-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div
+        id="introduction-modal"
+        class="modal"
+        role="dialog"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        aria-modal="true"
+        aria-hidden="true"
+    >
         <div class="modal-content">
-            <button class="close-btn" aria-label="Close introduction">&times;</button>
-            <h2 id="modal-title">Welcome to the Weather App!</h2>
-            <p>Enter a city name to get real-time weather details.</p>
+            <button class="close-btn" type="button" aria-label="Close introduction dialog">&times;</button>
+            <h2 id="modal-title">Welcome to the World Wide Weather App!</h2>
+            <p id="modal-description">
+                Type a city name, or select one of the suggested cities, to view its current weather information.
+            </p>
         </div>
     </div>
 
     <!-- Main Container -->
-    <main class="container">
-        <section class="weather-card">
-            <label for="city-input">Enter City Name:</label>
+    <main id="main-content" class="container" role="main">
+        <!-- Optional logo example (uncomment and add your image if needed)
+        <img src="assets/images/logo.png" alt="World Wide Weather App logo">
+        -->
+
+        <h1 class="app-title">World Wide Weather App</h1>
+
+        <section class="weather-card" aria-labelledby="weather-section-title">
+            <h2 id="weather-section-title" class="visually-hidden">Search and weather details</h2>
+
+            <label for="city-input">Enter city name:</label>
             <div class="input-group">
-                <input type="text" id="city-input" placeholder="E.g., London, Tokyo" aria-label="City Name">
-                <button id="city-input-btn">Get Weather</button>
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="E.g., London, Tokyo"
+                    aria-label="City name"
+                    autocomplete="off"
+                >
+                <button id="city-input-btn" type="button">Get weather</button>
             </div>
+
+            <!-- Error messages announced to assistive tech -->
             <div id="error-container" aria-live="assertive"></div>
 
+            <!-- Quick-select city list -->
+            <div class="city-list" aria-label="Quick select cities">
+                <p>Or pick a city:</p>
+                <button class="city-btn" type="button" data-city="London">London</button>
+                <button class="city-btn" type="button" data-city="Tokyo">Tokyo</button>
+                <button class="city-btn" type="button" data-city="New York">New York</button>
+                <button class="city-btn" type="button" data-city="Sydney">Sydney</button>
+                <button class="city-btn" type="button" data-city="Paris">Paris</button>
+                <button class="city-btn" type="button" data-city="Berlin">Berlin</button>
+                <button class="city-btn" type="button" data-city="Dubai">Dubai</button>
+                <button class="city-btn" type="button" data-city="Cape Town">Cape Town</button>
+                <button class="city-btn" type="button" data-city="Rio de Janeiro">Rio de Janeiro</button>
+                <button class="city-btn" type="button" data-city="Toronto">Toronto</button>
+            </div>
+
+            <!-- Weather information output -->
             <div id="weather-info" aria-live="polite">
-                <h1 id="city-name"></h1>
-                <span id="weather-icon"></span>
+                <h3 id="city-name"></h3>
+
+                <!-- Decorative icon: hidden from screen readers, description is in text -->
+                <span id="weather-icon" aria-hidden="true"></span>
+
                 <p id="temperature"></p>
                 <p id="description"></p>
                 <p id="wind-speed"></p>

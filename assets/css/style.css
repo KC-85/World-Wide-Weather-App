@@ -1,40 +1,88 @@
 /* Global Styles */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: linear-gradient(to right, #e0f7fa, #b2ebf2);
     color: #333;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: flex-start;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+/* App title */
+.app-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Visually hidden content (for screen readers) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Modal Styles */
+
 .modal {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-active {
+.modal.active {
     display: flex;
 }
 
 .modal-content {
+    position: relative;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
+    width: 85%;
     max-width: 450px;
     text-align: center;
 }
@@ -45,17 +93,29 @@ body {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
+    border: none;
+    background: none;
 }
 
-/* Weather Card */
+/* --------------------
+   Weather Card
+-------------------- */
+
 .weather-card {
-    max-width: 400px;
+    max-width: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 16px;
     background: linear-gradient(135deg, #81d4fa, #4fc3f7);
     border-radius: 10px;
     text-align: center;
-    color: white;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.weather-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 /* Weather Icon */
@@ -69,11 +129,13 @@ body {
 .input-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 #city-input {
-    width: 90%;
+    width: 100%;
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -81,12 +143,11 @@ body {
 }
 
 #city-input-btn {
-    margin-top: 8px;
-    width: 50%;
+    width: 100%;
     font-size: 16px;
     padding: 10px;
     background-color: #3498db;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -104,12 +165,141 @@ body {
     border-radius: 5px;
     text-align: center;
     display: none;
+    margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
+/* Weather Info (hidden until first result) */
+#weather-info {
+    margin-top: 12px;
+    display: none;
+}
+
+/* --------------------
+   City List
+-------------------- */
+
+.city-list {
+    margin-top: 10px;
+}
+
+.city-list p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.city-btn {
+    margin: 3px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0277bd;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.city-btn:hover {
+    background-color: #01579b;
+}
+
+/* --------------------
+   Loading Spinner
+-------------------- */
+
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* --------------------
+   Media Queries
+   Mobile-first layout
+-------------------- */
+
+/* >= 375px (small phones and up) */
+@media (min-width: 375px) {
+    .container {
+        padding: 24px;
+    }
+
     .weather-card {
-        width: 95%;
-        padding: 15px;
+        padding: 18px;
+    }
+
+    #city-input {
+        font-size: 17px;
+    }
+
+    #city-input-btn {
+        font-size: 17px;
+    }
+}
+
+/* >= 576px (larger phones / small tablets) */
+@media (min-width: 576px) {
+    body {
+        align-items: center;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+
+    .weather-card {
+        max-width: 500px;
+    }
+
+    .input-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #city-input {
+        width: 70%;
+    }
+
+    #city-input-btn {
+        width: auto;
+        margin-left: 8px;
+        padding: 10px 16px;
+    }
+}
+
+/* >= 768px (tablets and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
+
+    .weather-card {
+        padding: 20px;
+    }
+}
+
+/* >= 1024px (small desktops and up) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .weather-card {
+        max-width: 480px;
+    }
+
+    .city-btn {
+        font-size: 15px;
+        padding: 7px 12px;
     }
 }
