@@ -1,4 +1,5 @@
 /* jshint esversion: 6, jquery: true */
+/* global moment */
 
 // Function to display error messages
 export function showError(message) {
