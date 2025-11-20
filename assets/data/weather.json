@@ -4,46 +4,16 @@
       "temp": 14,
       "wind_speed": 5,
       "weather": [
-        {
-          "main": "Clouds",
-          "description": "overcast clouds"
-        }
+        { "main": "Clouds", "description": "overcast clouds" }
       ]
     }
   },
-  "tokyo": {
+  "dublin": {
     "current": {
-      "temp": 22,
-      "wind_speed": 3,
+      "temp": 15,
+      "wind_speed": 6,
       "weather": [
-        {
-          "main": "Clear",
-          "description": "clear sky"
-        }
-      ]
-    }
-  },
-  "new york": {
-    "current": {
-      "temp": 18,
-      "wind_speed": 7,
-      "weather": [
-        {
-          "main": "Rain",
-          "description": "light rain"
-        }
-      ]
-    }
-  },
-  "sydney": {
-    "current": {
-      "temp": 25,
-      "wind_speed": 4,
-      "weather": [
-        {
-          "main": "Clear",
-          "description": "sunny"
-        }
+        { "main": "Clouds", "description": "scattered clouds" }
       ]
     }
   },
@@ -52,10 +22,7 @@
       "temp": 16,
       "wind_speed": 6,
       "weather": [
-        {
-          "main": "Clouds",
-          "description": "broken clouds"
-        }
+        { "main": "Clouds", "description": "broken clouds" }
       ]
     }
   },
@@ -64,46 +31,242 @@
       "temp": 12,
       "wind_speed": 9,
       "weather": [
-        {
-          "main": "Rain",
-          "description": "moderate rain"
-        }
+        { "main": "Rain", "description": "moderate rain" }
       ]
     }
   },
-  "dubai": {
+  "madrid": {
     "current": {
-      "temp": 32,
-      "wind_speed": 10,
+      "temp": 24,
+      "wind_speed": 4,
       "weather": [
-        {
-          "main": "Clear",
-          "description": "hot and sunny"
-        }
+        { "main": "Clear", "description": "sunny" }
       ]
     }
   },
-  "cape town": {
+  "barcelona": {
     "current": {
-      "temp": 20,
-      "wind_speed": 8,
-      "weather": [
-        {
-          "main": "Mist",
-          "description": "misty"
-        }
-      ]
-    }
-  },
-  "rio de janeiro": {
-    "current": {
-      "temp": 27,
+      "temp": 22,
       "wind_speed": 5,
       "weather": [
-        {
-          "main": "Drizzle",
-          "description": "light drizzle"
-        }
+        { "main": "Clear", "description": "clear sky" }
+      ]
+    }
+  },
+  "rome": {
+    "current": {
+      "temp": 21,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clear", "description": "sunny intervals" }
+      ]
+    }
+  },
+  "milan": {
+    "current": {
+      "temp": 19,
+      "wind_speed": 4,
+      "weather": [
+        { "main": "Clouds", "description": "few clouds" }
+      ]
+    }
+  },
+  "lisbon": {
+    "current": {
+      "temp": 20,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clear", "description": "clear sky" }
+      ]
+    }
+  },
+  "amsterdam": {
+    "current": {
+      "temp": 13,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Rain", "description": "light rain" }
+      ]
+    }
+  },
+  "brussels": {
+    "current": {
+      "temp": 14,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "overcast clouds" }
+      ]
+    }
+  },
+  "vienna": {
+    "current": {
+      "temp": 15,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clouds", "description": "scattered clouds" }
+      ]
+    }
+  },
+  "prague": {
+    "current": {
+      "temp": 13,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
+      ]
+    }
+  },
+  "warsaw": {
+    "current": {
+      "temp": 11,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Rain", "description": "light rain" }
+      ]
+    }
+  },
+  "budapest": {
+    "current": {
+      "temp": 14,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clouds", "description": "scattered clouds" }
+      ]
+    }
+  },
+  "copenhagen": {
+    "current": {
+      "temp": 10,
+      "wind_speed": 9,
+      "weather": [
+        { "main": "Clouds", "description": "overcast clouds" }
+      ]
+    }
+  },
+  "stockholm": {
+    "current": {
+      "temp": 8,
+      "wind_speed": 10,
+      "weather": [
+        { "main": "Clouds", "description": "few clouds" }
+      ]
+    }
+  },
+  "oslo": {
+    "current": {
+      "temp": 7,
+      "wind_speed": 9,
+      "weather": [
+        { "main": "Snow", "description": "light snow showers" }
+      ]
+    }
+  },
+  "helsinki": {
+    "current": {
+      "temp": 5,
+      "wind_speed": 11,
+      "weather": [
+        { "main": "Snow", "description": "snow and wind" }
+      ]
+    }
+  },
+  "athens": {
+    "current": {
+      "temp": 23,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clear", "description": "sunny" }
+      ]
+    }
+  },
+  "bucharest": {
+    "current": {
+      "temp": 16,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
+      ]
+    }
+  },
+  "sofia": {
+    "current": {
+      "temp": 14,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "scattered clouds" }
+      ]
+    }
+  },
+  "zagreb": {
+    "current": {
+      "temp": 13,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clouds", "description": "few clouds" }
+      ]
+    }
+  },
+  "belgrade": {
+    "current": {
+      "temp": 15,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "overcast clouds" }
+      ]
+    }
+  },
+  "zurich": {
+    "current": {
+      "temp": 12,
+      "wind_speed": 4,
+      "weather": [
+        { "main": "Clouds", "description": "few clouds" }
+      ]
+    }
+  },
+  "geneva": {
+    "current": {
+      "temp": 13,
+      "wind_speed": 4,
+      "weather": [
+        { "main": "Clouds", "description": "scattered clouds" }
+      ]
+    }
+  },
+  "reykjavik": {
+    "current": {
+      "temp": 4,
+      "wind_speed": 12,
+      "weather": [
+        { "main": "Snow", "description": "snow showers" }
+      ]
+    }
+  },
+
+  "new york": {
+    "current": {
+      "temp": 18,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Rain", "description": "light rain" }
+      ]
+    }
+  },
+  "los angeles": {
+    "current": {
+      "temp": 26,
+      "wind_speed": 3,
+      "weather": [
+        { "main": "Clear", "description": "sunny" }
+      ]
+    }
+  },
+  "chicago": {
+    "current": {
+      "temp": 16,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
       ]
     }
   },
@@ -112,10 +275,308 @@
       "temp": 8,
       "wind_speed": 11,
       "weather": [
-        {
-          "main": "Snow",
-          "description": "light snow"
-        }
+        { "main": "Snow", "description": "light snow" }
+      ]
+    }
+  },
+  "vancouver": {
+    "current": {
+      "temp": 10,
+      "wind_speed": 9,
+      "weather": [
+        { "main": "Rain", "description": "light rain" }
+      ]
+    }
+  },
+  "mexico city": {
+    "current": {
+      "temp": 22,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clear", "description": "sunny" }
+      ]
+    }
+  },
+  "miami": {
+    "current": {
+      "temp": 28,
+      "wind_speed": 10,
+      "weather": [
+        { "main": "Rain", "description": "heavy showers" }
+      ]
+    }
+  },
+
+  "sao paulo": {
+    "current": {
+      "temp": 24,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
+      ]
+    }
+  },
+  "rio de janeiro": {
+    "current": {
+      "temp": 27,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Drizzle", "description": "light drizzle" }
+      ]
+    }
+  },
+  "buenos aires": {
+    "current": {
+      "temp": 20,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Clear", "description": "sunny intervals" }
+      ]
+    }
+  },
+  "lima": {
+    "current": {
+      "temp": 19,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clouds", "description": "overcast clouds" }
+      ]
+    }
+  },
+  "bogota": {
+    "current": {
+      "temp": 17,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Rain", "description": "showers" }
+      ]
+    }
+  },
+  "santiago": {
+    "current": {
+      "temp": 21,
+      "wind_speed": 4,
+      "weather": [
+        { "main": "Clear", "description": "clear sky" }
+      ]
+    }
+  },
+
+  "cairo": {
+    "current": {
+      "temp": 30,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Clear", "description": "hot and sunny" }
+      ]
+    }
+  },
+  "lagos": {
+    "current": {
+      "temp": 29,
+      "wind_speed": 10,
+      "weather": [
+        { "main": "Rain", "description": "thunderstorms" }
+      ]
+    }
+  },
+  "johannesburg": {
+    "current": {
+      "temp": 18,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Clear", "description": "sunny" }
+      ]
+    }
+  },
+  "nairobi": {
+    "current": {
+      "temp": 20,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "scattered clouds" }
+      ]
+    }
+  },
+  "casablanca": {
+    "current": {
+      "temp": 19,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clouds", "description": "few clouds" }
+      ]
+    }
+  },
+  "accra": {
+    "current": {
+      "temp": 27,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Rain", "description": "light rain" }
+      ]
+    }
+  },
+  "addis ababa": {
+    "current": {
+      "temp": 17,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
+      ]
+    }
+  },
+  "cape town": {
+    "current": {
+      "temp": 20,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Mist", "description": "misty" }
+      ]
+    }
+  },
+
+  "tokyo": {
+    "current": {
+      "temp": 22,
+      "wind_speed": 3,
+      "weather": [
+        { "main": "Clear", "description": "clear sky" }
+      ]
+    }
+  },
+  "beijing": {
+    "current": {
+      "temp": 19,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "haze" }
+      ]
+    }
+  },
+  "shanghai": {
+    "current": {
+      "temp": 21,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Rain", "description": "light rain" }
+      ]
+    }
+  },
+  "seoul": {
+    "current": {
+      "temp": 18,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
+      ]
+    }
+  },
+  "hong kong": {
+    "current": {
+      "temp": 27,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Clear", "description": "humid and clear" }
+      ]
+    }
+  },
+  "singapore": {
+    "current": {
+      "temp": 30,
+      "wind_speed": 9,
+      "weather": [
+        { "main": "Rain", "description": "thunderstorms" }
+      ]
+    }
+  },
+  "mumbai": {
+    "current": {
+      "temp": 29,
+      "wind_speed": 10,
+      "weather": [
+        { "main": "Rain", "description": "monsoon showers" }
+      ]
+    }
+  },
+  "delhi": {
+    "current": {
+      "temp": 32,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clear", "description": "hot and dry" }
+      ]
+    }
+  },
+  "bangkok": {
+    "current": {
+      "temp": 31,
+      "wind_speed": 9,
+      "weather": [
+        { "main": "Rain", "description": "heavy showers" }
+      ]
+    }
+  },
+  "jakarta": {
+    "current": {
+      "temp": 30,
+      "wind_speed": 8,
+      "weather": [
+        { "main": "Rain", "description": "showers" }
+      ]
+    }
+  },
+  "manila": {
+    "current": {
+      "temp": 29,
+      "wind_speed": 9,
+      "weather": [
+        { "main": "Rain", "description": "thunderstorms" }
+      ]
+    }
+  },
+
+  "sydney": {
+    "current": {
+      "temp": 25,
+      "wind_speed": 4,
+      "weather": [
+        { "main": "Clear", "description": "sunny" }
+      ]
+    }
+  },
+  "melbourne": {
+    "current": {
+      "temp": 19,
+      "wind_speed": 6,
+      "weather": [
+        { "main": "Clouds", "description": "scattered clouds" }
+      ]
+    }
+  },
+  "brisbane": {
+    "current": {
+      "temp": 24,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clear", "description": "sunny intervals" }
+      ]
+    }
+  },
+  "auckland": {
+    "current": {
+      "temp": 18,
+      "wind_speed": 7,
+      "weather": [
+        { "main": "Clouds", "description": "broken clouds" }
+      ]
+    }
+  },
+  "perth": {
+    "current": {
+      "temp": 26,
+      "wind_speed": 5,
+      "weather": [
+        { "main": "Clear", "description": "clear sky" }
       ]
     }
   }
