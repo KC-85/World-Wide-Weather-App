@@ -102,13 +102,13 @@ body {
 -------------------- */
 
 .weather-card {
-    max-width: 100%;
+    max-width: 520px;   /* was 100% – gives it a nice chunky size */
     width: 100%;
-    padding: 16px;
+    padding: 22px;      /* was 16px */
     background: linear-gradient(135deg, #81d4fa, #4fc3f7);
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
-    color: #ffffff;
+    color: #080808;
     margin: 0 auto;
 }
 
@@ -219,10 +219,18 @@ body {
     z-index: 1000;
 }
 
-/* --------------------
-   Media Queries
-   Mobile-first layout
--------------------- */
+#temperature {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#description,
+#wind-speed,
+#date {
+    font-size: 1rem;
+}
+
+/* Media Queries - mobile-first layout */
 
 /* >= 375px (small phones and up) */
 @media (min-width: 375px) {
