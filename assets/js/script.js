@@ -35,6 +35,12 @@ $(document).ready(function () {
         }
     });
 
+    // Quick-select city buttons
+    $(".city-btn").on("click", function () {
+        const city = $(this).data("city");
+        getLocalWeather(city);
+    });
+
     // Handle user input
     function handleWeatherSearch() {
         const city = $("#city-input").val().trim();
