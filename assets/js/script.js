@@ -46,7 +46,7 @@ $(document).ready(function () {
         const city = $("#city-input").val().trim();
 
         if (!city) {
-            showError("Please enter a city name.");
+            showError("City not available in this demo, please enter a different city name.");
             return;
         }
 
