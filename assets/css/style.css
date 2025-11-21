@@ -12,15 +12,76 @@ body {
     padding: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
 }
+
+/* Header / Navbar */
+.site-header {
+    width: 100%;
+    background-color: #000000; /* black */
+    color: #ffffff;            /* white text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navbar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#open-help-btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#open-help-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    background-color: #000000; /* black */
+    color: #ffffff;            /* white text */
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    text-decoration: none;
+}
+
 
 /* Main container */
 .container {
     width: 100%;
     max-width: 480px;
     padding: 20px;
+}
+
+#main-content {
+    flex: 1;
 }
 
 /* App title */
