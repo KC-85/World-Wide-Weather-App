@@ -10,17 +10,34 @@ const localDataUrl = "assets/data/weather.json";
 
 $(document).ready(function () {
 
-    // Show introduction modal on load
-    $("#introduction-modal")
-        .addClass("active")
-        .attr("aria-hidden", "false");
+    // ---- Modal helpers ----
+    function openIntroModal() {
+        $("#introduction-modal")
+            .addClass("active")
+            .attr("aria-hidden", "false")
+            .fadeIn(200);
+    }
+
+    function closeIntroModal() {
+        $("#introduction-modal")
+            .fadeOut(200, function () {
+                $(this)
+                    .removeClass("active")
+                    .attr("aria-hidden", "true");
+            });
+    }
+
+    // Show introduction modal on load (remove this line if you only want it via the button)
+    // openIntroModal();
 
     // Close the introduction modal when the "X" button is clicked
     $(".close-btn").on("click", function () {
-        $("#introduction-modal")
-            .fadeOut()
-            .attr("aria-hidden", "true")
-            .removeClass("active");
+        closeIntroModal();
+    });
+
+    // 🔹 "How it works" button in the navbar opens the modal
+    $("#open-help-btn").on("click", function () {
+        openIntroModal();
     });
 
     // Button click triggers search
@@ -46,7 +63,7 @@ $(document).ready(function () {
         const city = $("#city-input").val().trim();
 
         if (!city) {
-            showError("City not available in this demo, please enter a different city name.");
+            showError("Please enter a city name.");
             return;
         }
 
@@ -70,7 +87,7 @@ $(document).ready(function () {
             const cityData = allData[key];
 
             if (!cityData) {
-                showError("City not available in this demo. Try London, Tokyo, New York or Sydney.");
+                showError("City not available in this demo. Try another major city like Dublin, New York or Tokyo.");
                 return;
             }
 
