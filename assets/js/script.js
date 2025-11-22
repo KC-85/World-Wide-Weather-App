@@ -1,33 +1,31 @@
 /* jshint esversion: 6, jquery: true */
 
-// This script will get local weather data from a JSON file 
-// Note: This will not be real-time data
-
 import { showError, formatDate, showLoading, hideLoading } from "./utils.js";
+import { runIntroAnimations, animateWeatherInfo, attachButtonHoverAnimations } from "./animations.js";
 
 // Path to local JSON dataset (relative to index.html)
 const localDataUrl = "assets/data/weather.json";
 
 $(document).ready(function () {
 
-    // ---- Modal helpers ----
+    // -----------------------------
+    // Modal helpers (plain jQuery)
+    // -----------------------------
     function openIntroModal() {
         $("#introduction-modal")
             .addClass("active")
             .attr("aria-hidden", "false")
-            .fadeIn(200);
+            .show(); // ensure it's visible
     }
 
     function closeIntroModal() {
         $("#introduction-modal")
-            .fadeOut(200, function () {
-                $(this)
-                    .removeClass("active")
-                    .attr("aria-hidden", "true");
-            });
+            .removeClass("active")
+            .attr("aria-hidden", "true")
+            .hide(); // fully hide it
     }
 
-    // Show introduction modal on load (remove this line if you only want it via the button)
+    // Show introduction modal on load
     // openIntroModal();
 
     // Close the introduction modal when the "X" button is clicked
@@ -35,10 +33,36 @@ $(document).ready(function () {
         closeIntroModal();
     });
 
-    // 🔹 "How it works" button in the navbar opens the modal
+    // "How it works" button in the navbar opens the modal
     $("#open-help-btn").on("click", function () {
         openIntroModal();
     });
+
+    // Optional: close modal when clicking the dark overlay
+    $("#introduction-modal").on("click", function (e) {
+        if (e.target === this) {
+            closeIntroModal();
+        }
+    });
+
+    // Optional: Esc key closes modal
+    $(document).on("keydown", function (e) {
+        if (e.key === "Escape") {
+            closeIntroModal();
+        }
+    });
+
+    // -----------------------------
+    // Intro animations (GSAP in separate file)
+    // -----------------------------
+    runIntroAnimations();
+
+    // Hover shake animation for city buttons
+    attachButtonHoverAnimations();
+
+    // -----------------------------
+    // Event listeners
+    // -----------------------------
 
     // Button click triggers search
     $("#city-input-btn").on("click", function () {
@@ -58,7 +82,9 @@ $(document).ready(function () {
         getLocalWeather(city);
     });
 
+    // -----------------------------
     // Handle user input
+    // -----------------------------
     function handleWeatherSearch() {
         const city = $("#city-input").val().trim();
 
@@ -71,7 +97,9 @@ $(document).ready(function () {
         $("#city-input").val(""); // Clear input after search
     }
 
-    // Get weather from local JSON file
+    // -----------------------------
+    // Get weather from local JSON
+    // -----------------------------
     async function getLocalWeather(cityName) {
         try {
             showLoading();
@@ -101,7 +129,9 @@ $(document).ready(function () {
         }
     }
 
-    // Display weather details in the DOM
+    // -----------------------------
+    // Display weather details
+    // -----------------------------
     function displayWeather(data, cityName) {
         const weatherIcons = {
             Clear: "☀️",
@@ -122,6 +152,10 @@ $(document).ready(function () {
         $("#wind-speed").html(`Wind Speed: ${data.current.wind_speed} km/h`);
         $("#date").text(formatDate());
 
-        $("#weather-info").fadeIn();
+        // Ensure it's visible
+        $("#weather-info").css("display", "block");
+
+        // Trigger GSAP animation from separate file
+        animateWeatherInfo();
     }
 });
