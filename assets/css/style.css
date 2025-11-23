@@ -15,6 +15,24 @@ body {
     flex-direction: column;
 }
 
+/* Sticky Footer Layout */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto; /* pushes footer down */
+}
+
+.site-footer {
+    flex-shrink: 0;
+}
+
 /* Header / Navbar */
 .site-header {
     width: 100%;
