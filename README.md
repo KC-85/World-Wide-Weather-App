@@ -40,7 +40,7 @@ Alternatively, open your project in Gitpod and run the server. Once the site is 
 
 🛑 --- END ---- 🛑
 
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/mockup/mockup.png)
 
 source: [World-Wide-Weather-App amiresponsive](https://ui.dev/amiresponsive?url=https://kc-85.github.io/World-Wide-Weather-App)
 
