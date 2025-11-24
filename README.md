@@ -7,11 +7,17 @@ Developer: Kristian Cross ([KC-85](https://www.github.com/KC-85))
 [![GitHub repo size](https://img.shields.io/github/repo-size/KC-85/World-Wide-Weather-App)](https://www.github.com/KC-85/World-Wide-Weather-App)
 [![badge](https://img.shields.io/badge/deployment-GitHub_Pages-purple)](https://kc-85.github.io/World-Wide-Weather-App)
 
-⚠️ PROJECT INTRODUCTION AND RATIONALE⚠️
 
-In this section, include a few paragraphs providing an overview of your project. Essentially, this part is your "sales pitch". Describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience. Also, assessors lately have been asking that students explain "why" they opted to do a project about this particular topic/subject, so be sure to explain what made you choose this particular theme/concept/subject/idea. This is the project "rationale".
+World-Wide-Weather-App is an interactive, front-end weather application that allows users to explore weather data for major cities around the world.
 
-⚠️ --- END --- ⚠️
+In this submission, the app has been rebuilt to remove external API dependencies, and instead uses a local JSON dataset to simulate real-world weather data in a consistent and reliable way. This means the app remains stable and fully testable without worrying about API keys, rate limits, or network issues during assessment.
+
+The main goals of this project are:
+
+- To provide a simple, responsive, and accessible UI for viewing weather information.
+- To demonstrate strong use of JavaScript, jQuery, and modular code structure.
+- To showcase interactivity and user feedback through animations and error handling.
+- To clearly meet the PP2 learning outcomes around UX, responsiveness, accessibility, and client-side logic.
 
 🛑 README NOTES 🛑
 
