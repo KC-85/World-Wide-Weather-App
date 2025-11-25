@@ -214,30 +214,23 @@ In this section, you should go over the different parts of your project, and des
 
 ### Future Features
 
-⚠️ INSTRUCTIONS ⚠️
+**Live Weather API Integration**  
+- Reintroduce a secure backend or server-side proxy to connect to a real weather API such as OpenWeatherMap. This would provide genuine real-time data while keeping API keys secure.
 
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
+**Multi-day Forecast**  
+- Extend the weather card to include a 3–5 day forecast so users can see upcoming conditions and plan further ahead.
 
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
+**Favourite Cities**  
+- Allow users to “star” favourite cities and save them in localStorage so they appear as quick-access buttons on return visits.
 
-⚠️ --- END ---⚠️
+**Geolocation Support**  
+- Offer an option to detect the user’s approximate location (with permission) and automatically show the weather for their nearest major city.
 
-- **Advanced Calculations**: Add support for more complex mathematical operations, like square roots, powers, logarithms, trigonometry (sin, cos, tan), etc.
-- **Equation History**: Display a running log of previous calculations with the ability to recall or reuse past results.
-- **Multi-Step Equations**: Allow users to input multi-step calculations (e.g., `5 + 3 * 2 - 4`) with proper order of operations.
-- **Graphing Capabilities**: Integrate a graphing feature where users can plot functions or equations visually.
-- **Fraction Support**: Add functionality to handle calculations with fractions, including simplifications and conversions between fractions and decimals.
-- **Unit Conversions**: Introduce a feature to convert between different units of measurement (e.g., meters to feet, Celsius to Fahrenheit).
-- **Equation Solver**: Add the ability to solve algebraic equations for a given variable (e.g., `2x + 5 = 13`).
-- **Memory Functions**: Include memory functions (`M+`, `M-`, `MR`) so users can store, add to, and recall values during their calculations.
-- **Input Validation**: Provide real-time feedback for invalid inputs, such as attempting to divide by zero or using incorrect syntax.
-- **Dark Mode**: Add a dark mode option to enhance user experience and reduce eye strain during extended use.
-- **Customizable Themes**: Allow users to choose different themes, colors, or layouts for personalizing their experience.
-- **Calculation Explanations**: Display step-by-step explanations of how the solution is derived, useful for educational purposes or beginners.
-- **Statistical Functions**: Introduce basic statistical operations such as mean, median, mode, and standard deviation.
-- **Save & Share Calculations**: Allow users to save or share their results via a link or social media, especially for complex equations or useful outputs.
-- **Voice Input**: Add a voice input option for users to dictate their calculations instead of typing.
-- **Educational Quizzes**: Implement math-based quizzes or games to help users improve their arithmetic skills while using the app.
+**Units Toggle (°C / °F)**  
+- Provide a toggle that switches between Celsius and Fahrenheit to support both international and US-based users.
+
+**Theme Options**  
+- Implement light/dark or seasonal themes (e.g. winter, summer) to enhance personalisation and accessibility in different lighting conditions.
 
 ## Tools & Technologies
 
