@@ -201,12 +201,16 @@ In this section, you should go over the different parts of your project, and des
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Operators | The mathematical operators (`+`, `-`, `*`, `/`) are large and colorful to allow users to easily select their preferred method of testing their calculation skills. Each operator is color-coded, and has the text name as well for easy identification. | ![screenshot](documentation/features/operators.png) |
-| Equation | This section visibly displays the current equation to be calculated, dynamically updated to use the specific operator that the user has selected above. The empty `<input>` field allows users to enter valid numerical values to test their math skills. | ![screenshot](documentation/features/equation.png) |
-| Submit Answer | This button allows user to submit their calculation to see if they've successfully answered the current equation. Users can also use the `[ENTER]` key on their keyboard to submit their answers, too. | ![screenshot](documentation/features/submit-answer.png) |
-| Scores | This section tallies the total number of *correct* and *incorrect* answers that the user has calculated. Green to represent *correct*, and red to represent *incorrect*. | ![screenshot](documentation/features/scores.png) |
-| Alerts | Depending on whether or not the user gets the calculation correct or incorrect, alerts are used to provide simple feedback to the user. This showcases if they got it correct, or if they've gotten it incorrect, therefore also showing the correct answer. | ![screenshot](documentation/features/alerts.png) |
-| 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Love Maths* site by using the standard navbar and footer. | ![screenshot](documentation/features/404.png) |
+| **Navbar & Brand** | A fixed navbar across pages shows the app name (“World Wide Weather”) and keeps the top of the UI consistent. The dark background and white text provide strong contrast and clear separation from the main content. | ![screenshot](documentation/features/navbar.png) |
+| **How it Works Modal** | A dedicated button in the navbar opens an accessible modal dialog explaining how to use the app and that the data is loaded from a local dataset. This supports first-time users and improves overall UX. | ![screenshot](documentation/features/how-it-works-modal.png) |
+| **City Search Input** | Users can type any city name into an input field and click **Get weather** (or press Enter) to request data. Empty submissions are validated with a clear error message. | ![screenshot](documentation/features/city-search.png) |
+| **Quick-Select City Buttons** | A row of quick-select buttons (e.g. London, Dublin, New York, Tokyo, Sydney, etc.) allows users to instantly load weather data for popular major cities with a single click. Each button includes a hover animation for extra interactivity. | ![screenshot](documentation/features/city-buttons.png) |
+| **Weather Information Card** | Once a valid city is found in the local JSON data, a weather card displays the city name, weather icon (emoji), temperature in °C, description, wind speed, and the current date/time formatted via Moment.js. GSAP animations are used to fade/slide this content into view. | ![screenshot](documentation/features/weather-card.png) |
+| **Error Handling Area** | When the user enters a city that is not available in the demo dataset, a clearly styled error area appears, informing the user that the city is not available and prompting them to try another major city. | ![screenshot](documentation/features/error-messages.png) |
+| **Loading Indicator** | While data is being fetched from the local JSON file, a loading spinner is displayed to inform users that work is in progress, preventing confusion or repeated clicks. | ![screenshot](documentation/features/loading-spinner.png) |
+| **404 Page** | A custom 404 page matches the app’s styling and provides a friendly message and a **Return to Home** link. This replaces the default GitHub Pages 404 and keeps users within the app’s UX. | ![screenshot](documentation/features/404.png) |
+| **Responsiveness** | The layout is built mobile-first and scales up to tablet and desktop. The main content is centered with appropriate spacing, and the footer remains stuck to the bottom of the viewport on short pages. | ![screenshot](documentation/features/responsive-layout.png) |
+
 
 ### Future Features
 
