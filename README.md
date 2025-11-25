@@ -176,24 +176,17 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## User Stories
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, list all of your possible user stories for the project. Samples have been provided below using the example walkthrough project for your inspiration. Make sure to adjust to match your own project features!
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a user | I would like to input two numbers and select an operator (`+`, `-`, `*`, `/`) | so that I can calculate a result. |
-| As a user | I would like the application to show me an error message if I enter empty input (`NaN`) | so that I understand what went wrong. |
-| As a user | I would like the calculation to happen instantly after I select an operator | so that I get my result quickly without waiting. |
-| As a user | I would like the application to have clear and large buttons for each operator | so that I can easily select the correct one on any device. |
-| As a user | I would like the application to have high-contrast colors and accessible fonts | so that I can easily read and interact with it. |
-| As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. |
-| As a user | I would like the app to show me the correct result if my equation was incorrect | so that I understand how the answer was calculated. |
-| As a user |  I would like to see how many equations I get correct or incorrect | so I can push myself to improve my math skills. |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
-
+| As a user | I want to quickly see the current weather for a city | so that I can decide what to wear or plan my activities. |
+| As a user | I want to use clearly labelled input fields and buttons | so that I can understand how to search without confusion. |
+| As a user | I want to choose from a list of common cities | so that I can get weather data with a single click. |
+| As a user | I want to see an error message if the city is not available | so that I know I need to try a different city. |
+| As a user | I want the app to work on my mobile phone | so that I can check the weather when I’m on the go. |
+| As a user | I want the text and buttons to be readable and accessible | so that I can comfortably use the app even with visual impairments. |
+| As a user | I want to see some visual feedback when the weather is updated | so that I notice when the data changes. |
+| As a user | I want a “How it works” explanation | so that I can quickly understand the purpose and features of the app. |
+| As a user | I want to see a helpful 404 page if I reach a broken link | so that I can easily navigate back to the homepage. |
 ## Features
 
 ⚠️ INSTRUCTIONS ⚠️
@@ -354,12 +347,6 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 
 ### Local VS Deployment
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site. Generally, there shouldn't be [m]any major differences, so if you honestly cannot find any differences, feel free to use the following example:
-
-⚠️ --- END --- ⚠️
-
 There are no remaining major differences between the local version when compared to the deployed version online.
 
 ## Credits
@@ -405,14 +392,6 @@ Looking for some media files? Here are some popular sites to use. The list of ex
     - [Lorem Picsum](https://picsum.photos) (placeholder images)
     - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
     - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-- Audio
-    - [Audio Micro](https://www.audiomicro.com/free-sound-effects)
-    - [Button Clicks](https://www.zapsplat.com/sound-effect-category/button-clicks)
-    - [Lasers & Weapons](https://www.zapsplat.com/sound-effect-category/lasers-and-weapons/page/5)
-    - [Puzzle Music](https://soundimage.org/puzzle-music)
-    - [Camtasia Audio](https://library.techsmith.com/camtasia/assets/Audio)
-- Video
-    - [Videvo](https://www.videvo.net)
 - Image Compression
     - [TinyPNG](https://tinypng.com) (for images <5MB)
     - [CompressPNG](https://compresspng.com) (for images >5MB)
