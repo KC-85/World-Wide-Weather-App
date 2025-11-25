@@ -19,6 +19,22 @@ The main goals of this project are:
 - To showcase interactivity and user feedback through animations and error handling.
 - To clearly meet the PP2 learning outcomes around UX, responsiveness, accessibility, and client-side logic.
 
+I chose to build a weather app because it is a recognisable, practical concept that naturally combines:
+
+- **User input and validation** (searching for cities).
+- **Data handling** (mapping city names to structured weather data).
+- **Dynamic UI updates** (showing and updating the weather card).
+- **User experience considerations** (error handling, accessibility, responsiveness).
+
+The original version of this project used the OpenWeatherMap API. For the resubmission, I decided to move to a local JSON dataset so that the app is fully deterministic and robust during assessment, while still demonstrating the same logical flow a real-weather app would use. This decision also shows that I can adapt the architecture of a project when requirements or constraints (such as not exposing API keys client-side) change.
+
+From a learning perspective, this project gave me the opportunity to:
+
+- Improve DOM manipulation skills with jQuery.
+- Integrate a small animation library (GSAP) for tasteful, non-intrusive motion.
+- Strengthen my understanding of accessibility and ARIA attributes.
+- Practise structuring JavaScript into separate modules (`script.js`, `utils.js`, `animations.js`).
+
 🛑 README NOTES 🛑
 
 Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
@@ -30,15 +46,6 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 Note: these are not visible within your README Previewer, and are only visible once you push the code to GitHub.
 
 **Site Mockups**
-*([amiresponsive](https://ui.dev/amiresponsive?url=https://kc-85.github.io/World-Wide-Weather-App), [techsini](https://techsini.com/multi-mockup), etc.)*
-Having issues generating site mockups? This is likely due to security policies with your deployed site.
-If you open up your DevTools, there may be an error referencing `X-Frame-Options`.
-
-For Chrome users, head over to http://bit.ly/3iRPn4u and install the extension within your browser. Once installed, navigate back to the mockup site of your choice. You should find your site rendering in the various devices now.
-
-Alternatively, open your project in Gitpod and run the server. Once the site is running, click the `Ports` tab from your Gitpod Terminal. Click the padlock on the appropriate port for your project (`Flask: 5000`, `Django: 8000`). This will make your local page public temporarily. Now, copy the URL of your live-preview page into the responsive tool above. You should find your site rendering in the various devices.
-
-🛑 --- END ---- 🛑
 
 ![screenshot](documentation/mockup/mockup.png)
 
@@ -51,33 +58,48 @@ source: [World-Wide-Weather-App amiresponsive](https://ui.dev/amiresponsive?url=
 
 ### The 5 Planes of UX
 
-⚠️ NOTE: make sure to update the text below to match your own project! ⚠️
-
 #### 1. Strategy
 
 **Purpose**
-- Provide users with a simple and accessible way to perform basic mathematical operations.
-- Deliver instant feedback to improve usability and encourage learning.
-- Support accessibility and user-friendly interactions.
+- Provide users with a quick, lightweight way to check weather information for major cities around the world.
+- Offer a clean and focused interface that avoids clutter and prioritises readability.
+- Demonstrate a realistic weather app workflow using a local dataset instead of a live API.
 
 **Primary User Needs**
-- Perform calculations quickly and accurately.
-- Understand errors and correct them easily.
-- Track performance to motivate self-improvement.
+- Enter a city name and instantly see relevant weather information.
+- Choose from common cities via quick-access buttons for convenience.
+- Understand errors clearly if the city is not found in the dataset.
+- Use the app comfortably on mobile, tablet, and desktop devices.
 
 **Business Goals**
-- Encourage users to engage with the app for educational and recreational purposes.
-- Showcase a well-designed, accessible tool that supports learning.
+- Showcase a well-structured, accessible, and responsive front-end project.
+- Demonstrate competence with HTML, CSS, JavaScript, jQuery, JSON data, and basic animation.
+- Provide a solid portfolio piece that clearly meets the PP2 learning outcomes.
 
 #### 2. Scope
 
 **[Features](#features)** (see below)
 
 **Content Requirements**
-- Clear labels and instructions for input and operator buttons.
-- Error messages for invalid inputs.
-- Instant calculation results.
-- Statistics display for tracking correct/incorrect equations.
+- Introductory “How it works” modal to explain the app’s purpose and usage.
+- Search input for entering any city name.
+- Quick-select city buttons for popular global cities.
+- Weather information card displaying:
+  - City name
+  - Weather icon (emoji-based)
+  - Temperature
+  - Weather description
+  - Wind speed
+  - Last updated date/time
+- Error messaging area for invalid or unavailable city searches.
+- Sticky navbar and footer for a consistent frame.
+- 404 page for non-existing routes.
+- Subtle animations via GSAP to improve perceived responsiveness and feedback.
+
+- Clear labels and instructions explaining how to search and what to expect.
+- Informative error messages when a city cannot be found in the local dataset.
+- Visible, well-structured weather information with clear hierarchy.
+- Brief but useful text in the help modal to support first-time users.
 
 #### 3. Structure
 
