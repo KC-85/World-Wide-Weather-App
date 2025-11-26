@@ -137,14 +137,15 @@ When you add a color to the palette, the URL is dynamically updated, making it e
 
 ⚠️ --- END --- ⚠️
 
-I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
+I used [coolors.co](https://coolors.co/e0f7fa-b2ebf2-333333-000000-ffffff) to generate my color palette.
 
-- `#000000` primary text.
-- `#3772FF` primary highlights.
-- `#DF2935` secondary text.
-- `#FDCA40` secondary highlights.
+- `#E0F7FA` background.
+- `#B2EBF2` primary highlights.
+- `#333333` error text.
+- `#000000` navbar + footer.
+- `#FFFFFF` text.
 
-![screenshot](documentation/coolors.png)
+![screenshot](documentation/coolors/coolors.png)
 
 ### Typography
 
