@@ -8,9 +8,7 @@ const localDataUrl = "assets/data/weather.json";
 
 $(document).ready(function () {
 
-    // -----------------------------
     // Modal helpers (plain jQuery)
-    // -----------------------------
     function openIntroModal() {
         $("#introduction-modal")
             .addClass("active")
@@ -51,18 +49,14 @@ $(document).ready(function () {
         }
     });
 
-    // -----------------------------
     // Intro animations (GSAP in separate file)
-    // -----------------------------
     runIntroAnimations();
 
     // Hover shake animation for city buttons
     attachButtonHoverAnimations();
 
-    // -----------------------------
     // Event listeners
-    // -----------------------------
-
+    
     // Button click triggers search
     $("#city-input-btn").on("click", function () {
         handleWeatherSearch();
@@ -81,9 +75,7 @@ $(document).ready(function () {
         getLocalWeather(city);
     });
 
-    // -----------------------------
     // Handle user input
-    // -----------------------------
     function handleWeatherSearch() {
         const city = $("#city-input").val().trim();
 
@@ -96,9 +88,7 @@ $(document).ready(function () {
         $("#city-input").val(""); // Clear input after search
     }
 
-    // -----------------------------
     // Get weather from local JSON
-    // -----------------------------
     async function getLocalWeather(cityName) {
         try {
             showLoading();
@@ -128,9 +118,7 @@ $(document).ready(function () {
         }
     }
 
-    // -----------------------------
     // Display weather details
-    // -----------------------------
     function displayWeather(data, cityName) {
         const weatherIcons = {
             Clear: "☀️",
