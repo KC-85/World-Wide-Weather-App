@@ -1,4 +1,4 @@
-/* jshint esversion: 11, jquery: true */
+// jshint esversion: 11, jquery: true */
 
 import { showError, formatDate, showLoading, hideLoading } from "./utils.js";
 import { runIntroAnimations, animateWeatherInfo, attachButtonHoverAnimations } from "./animations.js";
@@ -21,9 +21,7 @@ $(document).ready(function () {
             .removeClass("active")
             .attr("aria-hidden", "true")
             .hide(); // fully hide it
-    }
-
-    // Show introduction modal on load
+    };
 
     // Close the introduction modal when the "X" button is clicked
     $(".close-btn").on("click", function () {
@@ -56,7 +54,7 @@ $(document).ready(function () {
     attachButtonHoverAnimations();
 
     // Event listeners
-    
+
     // Button click triggers search
     $("#city-input-btn").on("click", function () {
         handleWeatherSearch();
@@ -108,7 +106,9 @@ $(document).ready(function () {
                 return;
             }
 
-            displayWeather(cityData, cityName);
+            setTimeout(() => {
+                displayWeather(cityData, cityName);
+            }, 1000);
 
         } catch (error) {
             console.error("Local data error:", error);
@@ -140,11 +140,15 @@ $(document).ready(function () {
             .join(' ');
 
         $('#city-name').text(`Weather for ${niceName}`);
-
+        
         $("#temperature").html(`${data.current.temp}°C`);
         $("#description").text(data.current.weather[0].description);
         $("#wind-speed").html(`Wind Speed: ${data.current.wind_speed} km/h`);
-        $("#date").text(formatDate());
+        if (data.timezone) {
+            $('#date').text(formatDate(data.timezone));
+        } else {
+            $('#date').text('Time not available');
+        }
 
         // Ensure it's visible
         $("#weather-info").css("display", "block");

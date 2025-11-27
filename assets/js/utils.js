@@ -11,13 +11,22 @@ export function showError(message) {
 }
 
 // Function to format the date nicely
-export function formatDate() {
-    return moment().format('MMMM Do YYYY, hh:mm:ss a');
+export function formatDate(timeZone) {
+    return new Date().toLocaleString('en-GB', {
+        timeZone,
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    });
 }
 
 // Show loading animation
 export function showLoading() {
     if (!$(".loading-spinner").length) {
+        $("#weather-info").hide();
         $("body").append('<div class="loading-spinner">Loading...</div>');
     }
 }

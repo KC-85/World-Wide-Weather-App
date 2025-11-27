@@ -1,5 +1,6 @@
 {
   "london": {
+    "timezone": "Europe/London",
     "current": {
       "temp": 14,
       "wind_speed": 5,
@@ -9,6 +10,7 @@
     }
   },
   "dublin": {
+    "timezone": "Europe/Dublin",
     "current": {
       "temp": 15,
       "wind_speed": 6,
@@ -18,6 +20,7 @@
     }
   },
   "paris": {
+    "timezone": "Europe/Paris",
     "current": {
       "temp": 16,
       "wind_speed": 6,
@@ -27,6 +30,7 @@
     }
   },
   "berlin": {
+    "timezone": "Europe/Berlin",
     "current": {
       "temp": 12,
       "wind_speed": 9,
@@ -36,6 +40,7 @@
     }
   },
   "madrid": {
+    "timezone": "Europe/Madrid",
     "current": {
       "temp": 24,
       "wind_speed": 4,
@@ -45,6 +50,7 @@
     }
   },
   "barcelona": {
+    "timezone": "Europe/Madrid",
     "current": {
       "temp": 22,
       "wind_speed": 5,
@@ -54,6 +60,7 @@
     }
   },
   "rome": {
+    "timezone": "Europe/Rome",
     "current": {
       "temp": 21,
       "wind_speed": 5,
@@ -63,6 +70,7 @@
     }
   },
   "milan": {
+    "timezone": "Europe/Rome",
     "current": {
       "temp": 19,
       "wind_speed": 4,
@@ -72,6 +80,7 @@
     }
   },
   "lisbon": {
+    "timezone": "Europe/Lisbon",
     "current": {
       "temp": 20,
       "wind_speed": 5,
@@ -81,6 +90,7 @@
     }
   },
   "amsterdam": {
+    "timezone": "Europe/Amsterdam",
     "current": {
       "temp": 13,
       "wind_speed": 7,
@@ -90,6 +100,7 @@
     }
   },
   "brussels": {
+    "timezone": "Europe/Brussels",
     "current": {
       "temp": 14,
       "wind_speed": 6,
@@ -99,6 +110,7 @@
     }
   },
   "vienna": {
+    "timezone": "Europe/Vienna",
     "current": {
       "temp": 15,
       "wind_speed": 5,
@@ -108,6 +120,7 @@
     }
   },
   "prague": {
+    "timezone": "Europe/Prague",
     "current": {
       "temp": 13,
       "wind_speed": 5,
@@ -117,6 +130,7 @@
     }
   },
   "warsaw": {
+    "timezone": "Europe/Warsaw",
     "current": {
       "temp": 11,
       "wind_speed": 8,
@@ -126,6 +140,7 @@
     }
   },
   "budapest": {
+    "timezone": "Europe/Budapest",
     "current": {
       "temp": 14,
       "wind_speed": 5,
@@ -135,6 +150,7 @@
     }
   },
   "copenhagen": {
+    "timezone": "Europe/Copenhagen",
     "current": {
       "temp": 10,
       "wind_speed": 9,
@@ -144,6 +160,7 @@
     }
   },
   "stockholm": {
+    "timezone": "Europe/Stockholm",
     "current": {
       "temp": 8,
       "wind_speed": 10,
@@ -153,6 +170,7 @@
     }
   },
   "oslo": {
+    "timezone": "Europe/Oslo",
     "current": {
       "temp": 7,
       "wind_speed": 9,
@@ -162,6 +180,7 @@
     }
   },
   "helsinki": {
+    "timezone": "Europe/Helsinki",
     "current": {
       "temp": 5,
       "wind_speed": 11,
@@ -171,6 +190,7 @@
     }
   },
   "athens": {
+    "timezone": "Europe/Athens",
     "current": {
       "temp": 23,
       "wind_speed": 6,
@@ -180,6 +200,7 @@
     }
   },
   "bucharest": {
+    "timezone": "Europe/Bucharest",
     "current": {
       "temp": 16,
       "wind_speed": 7,
@@ -189,6 +210,7 @@
     }
   },
   "sofia": {
+    "timezone": "Europe/Sofia",
     "current": {
       "temp": 14,
       "wind_speed": 6,
@@ -198,6 +220,7 @@
     }
   },
   "zagreb": {
+    "timezone": "Europe/Zagreb",
     "current": {
       "temp": 13,
       "wind_speed": 5,
@@ -207,6 +230,7 @@
     }
   },
   "belgrade": {
+    "timezone": "Europe/Belgrade",
     "current": {
       "temp": 15,
       "wind_speed": 6,
@@ -216,6 +240,7 @@
     }
   },
   "zurich": {
+    "timezone": "Europe/Zurich",
     "current": {
       "temp": 12,
       "wind_speed": 4,
@@ -225,6 +250,7 @@
     }
   },
   "geneva": {
+    "timezone": "Europe/Zurich",
     "current": {
       "temp": 13,
       "wind_speed": 4,
@@ -234,6 +260,7 @@
     }
   },
   "reykjavik": {
+    "timezone": "Atlantic/Reykjavik",
     "current": {
       "temp": 4,
       "wind_speed": 12,
@@ -244,6 +271,7 @@
   },
 
   "new york": {
+    "timezone": "America/New_York",
     "current": {
       "temp": 18,
       "wind_speed": 7,
@@ -253,6 +281,7 @@
     }
   },
   "los angeles": {
+    "timezone": "America/Los_Angeles",
     "current": {
       "temp": 26,
       "wind_speed": 3,
@@ -262,6 +291,7 @@
     }
   },
   "chicago": {
+    "timezone": "America/Chicago",
     "current": {
       "temp": 16,
       "wind_speed": 8,
@@ -271,6 +301,7 @@
     }
   },
   "toronto": {
+    "timezone": "America/Toronto",
     "current": {
       "temp": 8,
       "wind_speed": 11,
@@ -280,6 +311,7 @@
     }
   },
   "vancouver": {
+    "timezone": "America/Vancouver",
     "current": {
       "temp": 10,
       "wind_speed": 9,
@@ -289,6 +321,7 @@
     }
   },
   "mexico city": {
+    "timezone": "America/Mexico_City",
     "current": {
       "temp": 22,
       "wind_speed": 5,
@@ -298,6 +331,7 @@
     }
   },
   "miami": {
+    "timezone": "America/New_York",
     "current": {
       "temp": 28,
       "wind_speed": 10,
@@ -308,6 +342,7 @@
   },
 
   "sao paulo": {
+    "timezone": "America/Sao_Paulo",
     "current": {
       "temp": 24,
       "wind_speed": 6,
@@ -317,6 +352,7 @@
     }
   },
   "rio de janeiro": {
+    "timezone": "America/Sao_Paulo",
     "current": {
       "temp": 27,
       "wind_speed": 5,
@@ -326,6 +362,7 @@
     }
   },
   "buenos aires": {
+    "timezone": "America/Argentina/Buenos_Aires",
     "current": {
       "temp": 20,
       "wind_speed": 7,
@@ -335,6 +372,7 @@
     }
   },
   "lima": {
+    "timezone": "America/Lima",
     "current": {
       "temp": 19,
       "wind_speed": 5,
@@ -344,6 +382,7 @@
     }
   },
   "bogota": {
+    "timezone": "America/Bogota",
     "current": {
       "temp": 17,
       "wind_speed": 6,
@@ -353,6 +392,7 @@
     }
   },
   "santiago": {
+    "timezone": "America/Santiago",
     "current": {
       "temp": 21,
       "wind_speed": 4,
@@ -363,6 +403,7 @@
   },
 
   "cairo": {
+    "timezone": "Africa/Cairo",
     "current": {
       "temp": 30,
       "wind_speed": 8,
@@ -372,6 +413,7 @@
     }
   },
   "lagos": {
+    "timezone": "Africa/Lagos",
     "current": {
       "temp": 29,
       "wind_speed": 10,
@@ -381,6 +423,7 @@
     }
   },
   "johannesburg": {
+    "timezone": "Africa/Johannesburg",
     "current": {
       "temp": 18,
       "wind_speed": 7,
@@ -390,6 +433,7 @@
     }
   },
   "nairobi": {
+    "timezone": "Africa/Nairobi",
     "current": {
       "temp": 20,
       "wind_speed": 6,
@@ -399,6 +443,7 @@
     }
   },
   "casablanca": {
+    "timezone": "Africa/Casablanca",
     "current": {
       "temp": 19,
       "wind_speed": 5,
@@ -408,6 +453,7 @@
     }
   },
   "accra": {
+    "timezone": "Africa/Accra",
     "current": {
       "temp": 27,
       "wind_speed": 7,
@@ -417,6 +463,7 @@
     }
   },
   "addis ababa": {
+    "timezone": "Africa/Addis_Ababa",
     "current": {
       "temp": 17,
       "wind_speed": 8,
@@ -426,6 +473,7 @@
     }
   },
   "cape town": {
+    "timezone": "Africa/Johannesburg",
     "current": {
       "temp": 20,
       "wind_speed": 8,
@@ -436,6 +484,7 @@
   },
 
   "tokyo": {
+    "timezone": "Asia/Tokyo",
     "current": {
       "temp": 22,
       "wind_speed": 3,
@@ -445,6 +494,7 @@
     }
   },
   "beijing": {
+    "timezone": "Asia/Shanghai",
     "current": {
       "temp": 19,
       "wind_speed": 6,
@@ -454,6 +504,7 @@
     }
   },
   "shanghai": {
+    "timezone": "Asia/Shanghai",
     "current": {
       "temp": 21,
       "wind_speed": 7,
@@ -463,6 +514,7 @@
     }
   },
   "seoul": {
+    "timezone": "Asia/Seoul",
     "current": {
       "temp": 18,
       "wind_speed": 6,
@@ -472,6 +524,7 @@
     }
   },
   "hong kong": {
+    "timezone": "Asia/Hong_Kong",
     "current": {
       "temp": 27,
       "wind_speed": 8,
@@ -481,6 +534,7 @@
     }
   },
   "singapore": {
+    "timezone": "Asia/Singapore",
     "current": {
       "temp": 30,
       "wind_speed": 9,
@@ -490,6 +544,7 @@
     }
   },
   "mumbai": {
+    "timezone": "Asia/Kolkata",
     "current": {
       "temp": 29,
       "wind_speed": 10,
@@ -499,6 +554,7 @@
     }
   },
   "delhi": {
+    "timezone": "Asia/Kolkata",
     "current": {
       "temp": 32,
       "wind_speed": 6,
@@ -508,6 +564,7 @@
     }
   },
   "bangkok": {
+    "timezone": "Asia/Bangkok",
     "current": {
       "temp": 31,
       "wind_speed": 9,
@@ -517,6 +574,7 @@
     }
   },
   "jakarta": {
+    "timezone": "Asia/Jakarta",
     "current": {
       "temp": 30,
       "wind_speed": 8,
@@ -526,6 +584,7 @@
     }
   },
   "manila": {
+    "timezone": "Asia/Manila",
     "current": {
       "temp": 29,
       "wind_speed": 9,
@@ -536,6 +595,7 @@
   },
 
   "sydney": {
+    "timezone": "Australia/Sydney",
     "current": {
       "temp": 25,
       "wind_speed": 4,
@@ -545,6 +605,7 @@
     }
   },
   "melbourne": {
+    "timezone": "Australia/Melbourne",
     "current": {
       "temp": 19,
       "wind_speed": 6,
@@ -554,6 +615,7 @@
     }
   },
   "brisbane": {
+    "timezone": "Australia/Brisbane",
     "current": {
       "temp": 24,
       "wind_speed": 5,
@@ -563,6 +625,7 @@
     }
   },
   "auckland": {
+    "timezone": "Pacific/Auckland",
     "current": {
       "temp": 18,
       "wind_speed": 7,
@@ -572,6 +635,7 @@
     }
   },
   "perth": {
+    "timezone": "Australia/Perth",
     "current": {
       "temp": 26,
       "wind_speed": 5,
