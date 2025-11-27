@@ -1,4 +1,4 @@
-/* jshint esversion: 6, jquery: true */
+/* jshint esversion: 11, jquery: true */
 
 import { showError, formatDate, showLoading, hideLoading } from "./utils.js";
 import { runIntroAnimations, animateWeatherInfo, attachButtonHoverAnimations } from "./animations.js";
