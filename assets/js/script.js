@@ -146,7 +146,14 @@ $(document).ready(function () {
         const main = data.current.weather[0].main;
 
         $("#weather-icon").text(weatherIcons[main] || "🌍");
-        $("#city-name").text(`Weather for ${cityName}`);
+
+        const niceName = cityName
+            .split(' ')
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(' ');
+
+        $('#city-name').text(`Weather for ${niceName}`);
+        
         $("#temperature").html(`${data.current.temp}°C`);
         $("#description").text(data.current.weather[0].description);
         $("#wind-speed").html(`Wind Speed: ${data.current.wind_speed} km/h`);
