@@ -1,4 +1,4 @@
-/* jshint esversion: 6, jquery: true */
+/* jshint esversion: 11, jquery: true */
 /* global moment */
 
 // Function to display error messages
@@ -6,7 +6,7 @@ export function showError(message) {
     $("#error-container")
         .text(message)
         .fadeIn()
-        .delay(3000)
+        .delay(6000)
         .fadeOut();
 }
 
@@ -24,5 +24,7 @@ export function showLoading() {
 
 // Hide Loading animation
 export function hideLoading() {
-    $(".loading-spinner").remove();
+    setTimeout(() => {
+        $('.loading-spinner').remove();
+    }, 1000);
 }

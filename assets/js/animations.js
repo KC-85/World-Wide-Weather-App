@@ -1,4 +1,4 @@
-/* jshint esversion: 6, jquery: true */
+/* jshint esversion: 11, jquery: true */
 /* global gsap */
 
 export function runIntroAnimations() {

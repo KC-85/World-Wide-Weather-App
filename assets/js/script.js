@@ -115,7 +115,7 @@ $(document).ready(function () {
             const cityData = allData[key];
 
             if (!cityData) {
-                showError("City not available in this demo. Try another major city like Dublin, New York or Tokyo.");
+                showError(`${cityName} not available in this demo. Try another major city like Dublin, New York or Tokyo.`);
                 return;
             }
 
