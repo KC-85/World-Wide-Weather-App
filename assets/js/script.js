@@ -26,7 +26,6 @@ $(document).ready(function () {
     }
 
     // Show introduction modal on load
-    // openIntroModal();
 
     // Close the introduction modal when the "X" button is clicked
     $(".close-btn").on("click", function () {
@@ -153,7 +152,7 @@ $(document).ready(function () {
             .join(' ');
 
         $('#city-name').text(`Weather for ${niceName}`);
-        
+
         $("#temperature").html(`${data.current.temp}°C`);
         $("#description").text(data.current.weather[0].description);
         $("#wind-speed").html(`Wind Speed: ${data.current.wind_speed} km/h`);
