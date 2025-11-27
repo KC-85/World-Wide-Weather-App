@@ -43,7 +43,7 @@
     </div>
 
     <!-- Main Container -->
-    <main id="main-content" class="container" role="main">
+    <main id="main-content" class="container">
         <!-- Optional logo example (uncomment and add your image if needed)
         <img src="assets/images/logo.png" alt="World Wide Weather App logo">
         -->
@@ -69,7 +69,7 @@
             <div id="error-container" aria-live="assertive"></div>
 
             <!-- Quick-select city list -->
-            <div class="city-list" aria-label="Quick select cities">
+            <div class="city-list">
                 <p>Or pick a city:</p>
                 <button class="city-btn" type="button" data-city="London">London</button>
                 <button class="city-btn" type="button" data-city="Dublin">Dublin</button>
@@ -86,7 +86,7 @@
 
             <!-- Weather information output -->
             <div id="weather-info" aria-live="polite">
-                <h3 id="city-name"></h3>
+                <h3 id="city-name">City</h3>
 
                 <!-- Decorative icon: hidden from screen readers, description is in text -->
                 <span id="weather-icon" aria-hidden="true"></span>
