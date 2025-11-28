@@ -158,12 +158,11 @@ I used [coolors.co](https://coolors.co/e0f7fa-b2ebf2-333333-000000-ffffff) to ge
 
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Wireframe Sketcher](https://balsamiq.com/wireframes) to design my site wireframes.
+I've used [Wireframe Sketcher](https://wireframesketcher.com/) to design my site wireframes.
 
 | Page | Mobile | Tablet | Desktop |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) |
-| 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
 
 ## User Stories
 
