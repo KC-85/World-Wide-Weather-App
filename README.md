@@ -35,16 +35,6 @@ From a learning perspective, this project gave me the opportunity to:
 - Strengthen my understanding of accessibility and ARIA attributes.
 - Practise structuring JavaScript into separate modules (`script.js`, `utils.js`, `animations.js`).
 
-🛑 README NOTES 🛑
-
-Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
-
-Don't add screenshots for the README/TESTING into your `assets` or `static` folders. Create a new folder at the root-level called `documentation`. Consider creating sub-directories within `documentation` to handle things like `wireframes`, `features`, `validation`, `responsiveness`, etc.
-
-Learn about Markdown Alerts (aka Callouts), a fairly new feature for GitHub Markdown files.
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
-Note: these are not visible within your README Previewer, and are only visible once you push the code to GitHub.
-
 **Site Mockups**
 
 ![screenshot](documentation/mockup/mockup.png)
@@ -128,14 +118,6 @@ source: [World-Wide-Weather-App amiresponsive](https://ui.dev/amiresponsive?url=
 - **[Typography](#typography)** (see below)
 
 ### Colour Scheme
-
-⚠️INSTRUCTIONS ⚠️
-
-Explain your colors and color scheme. Consider adding a link and screenshot for your color scheme using [coolors](https://coolors.co/generate).
-
-When you add a color to the palette, the URL is dynamically updated, making it easier for you to return back to your color palette later if needed. See example below:
-
-⚠️ --- END --- ⚠️
 
 I used [coolors.co](https://coolors.co/e0f7fa-b2ebf2-333333-000000-ffffff) to generate my color palette.
 
@@ -301,21 +283,6 @@ There are no remaining major differences between the local version when compared
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 
 ### Media
-
-- Images
-    - [Pexels](https://www.pexels.com)
-    - [Unsplash](https://unsplash.com)
-    - [Pixabay](https://pixabay.com)
-    - [Lorem Picsum](https://picsum.photos) (placeholder images)
-    - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
-    - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-- Image Compression
-    - [TinyPNG](https://tinypng.com) (for images <5MB)
-    - [CompressPNG](https://compresspng.com) (for images >5MB)
-
-A few examples have been provided below to give you some ideas on how to do your own Media credits.
-
-⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
