@@ -95,40 +95,19 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Bug | Explanation | Screenshot |
 | --- | --- | --- |
-| Footer | The footer would not stay at the bottom of the screen during development | 
+| Navbar + Footer | The navbar and footer was either side of the screen during development | ![screenshot](documentation/bugs/footer.png) |
 
 ### Fixed Bugs
 
-[![GitHub issue custom search](https://img.shields.io/github/issues-search/KC-85/World-Wide-Weather-App?query=is%3Aissue%20is%3Aclosed%20label%3Abug&label=Fixed%20Bugs&color=green)](https://www.github.com/KC-85/World-Wide-Weather-App/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
-
-I've used [GitHub Issues](https://www.github.com/KC-85/World-Wide-Weather-App/issues) to track and manage bugs and issues during the development stages of my project.
-
-All previously closed/fixed bugs can be tracked [here](https://www.github.com/KC-85/World-Wide-Weather-App/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
-
-![screenshot](documentation/bugs/gh-issues-closed.png)
+| Fixed Bug | Screenshot | Notes |
+| --- | --- | --- |
+| Navbar + Footer | ![screenshot](documentation/bugs/footer.png) | Works as expected |
 
 ### Unfixed Bugs
 
-⚠️ INSTRUCTIONS ⚠️
-
-You will need to mention any unfixed bugs and why they are not fixed upon submission of your project. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. Where possible, you must fix all outstanding bugs, unless outside of your control.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here! It's better to be honest and list them, because if it's not documented and an assessor finds the issue, they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-⚠️ --- END --- ⚠️
-
-[![GitHub issue custom search](https://img.shields.io/github/issues-search/KC-85/World-Wide-Weather-App?query=is%3Aissue%2Bis%3Aopen%2Blabel%3Abug&label=Unfixed%20Bugs&color=red)](https://www.github.com/KC-85/World-Wide-Weather-App/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-
-Any remaining open issues can be tracked [here](https://www.github.com/KC-85/World-Wide-Weather-App/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
-
-![screenshot](documentation/bugs/gh-issues-open.png)
+- All known bugs have been fixed.
 
 ### Known Issues
-
-| Issue | Screenshot |
-| --- | --- |
-| The project is designed to be responsive from `375px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project’s scope, as taught by Code Institute. | ![screenshot](documentation/issues/poor-responsiveness.png) |
-| When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/issues/section-header.png) |
 
 > [!IMPORTANT]  
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
