@@ -95,13 +95,13 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Bug | Explanation | Screenshot |
 | --- | --- | --- |
-| Navbar + Footer | The navbar and footer was either side of the screen during development | ![screenshot](documentation/bugs/footer.png) |
+| Navbar + Footer | The navbar and footer was either side of the screen during development | ![screenshot](documentation/bugs/navbar-footer.png) |
 
 ### Fixed Bugs
 
 | Fixed Bug | Screenshot | Notes |
 | --- | --- | --- |
-| Navbar + Footer | ![screenshot](documentation/bugs/footer.png) | Works as expected |
+| Navbar + Footer | ![screenshot](documentation/bugs/fixed-bugs/navbar-footer-fix.png) | Works as expected |
 
 ### Unfixed Bugs
 
